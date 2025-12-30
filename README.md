@@ -10,6 +10,10 @@ repeatable codespace configuration for all users of your project. Once,
 initially configured, it is very simple to share custom-made
 development environment.
 
+Each codespace is hosted by GitHub in a Docker container, running on a
+virtual machine. All GitHub personal accounts include a 120 hrs of free
+compute time and 15 GB storage a month for GitHub Codespaces.
+
 ![Codespaces diagram](https://docs.github.com/assets/cb-68851/mw-1440/images/help/codespaces/codespaces-diagram.webp)
 
 ## Configuring Codespaces
@@ -33,48 +37,31 @@ codespaces created for your repository.
 
 ```json
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/universal:linux",
   "features": {}
 }
 ```
 
+### `image`
+
+The [default Linux image](https://github.com/devcontainers/images/tree/main/src/universal)
+is perfect start. It is based on Ubuntu packed with several programming
+language : Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#,
+.NET Core, PHP, Go, Ruby, and Conda.
+
 ### `features`
 
-Dev Container Features are self-contained units of installation code
+Dev Container **Features** are self-contained units of installation code
 and development container configuration. Features are designed to
-install atop a wide-range of base container images. 
+install atop a wide-range of base container images.
 
-#### Usage
+### Options
 
-To reference a Feature, add the desired Feature(s) to a
-`devcontainer.json`. See a Feature's README for available options, or
-leave the options empty to use the default value.
-
-Example `devcontainer.json`:
-
-{
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
-      "version": "latest"
-      }
-  },
-
-{
-    "name": "my-project-devcontainer",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
-    "features": {
-        "ghcr.io/devcontainers/features/go:1": {
-            "version": "1.18"
-        },
-        "ghcr.io/devcontainers/features/docker-in-docker:1": {
-            "version": "latest",
-            "moby": true
-        }
-    }
-}
-
-
-
-- `"image": "mcr.microsoft.com/devcontainers/universal:2",`
-- `"features": {}`
+- `"hostRequirements"`: While `devcontainer.json` does not focus on
+  hardware or VM provisioning, it can be useful to know one container’s
+  minimum RAM, CPU, and storage requirements.
+- `"postCreateCommand"`: This command finalizes container setup when a
+  dev container is created. We'll use it to install Python packges
+  listed inside `requirements.txt` file.
+- `"customization"`: Customize the _user experience_ while working
+  inside hte container.

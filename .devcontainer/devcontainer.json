@@ -1,8 +1,41 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Quarto Codespaces",
+  
+  // Default Linux image
+  "image": "mcr.microsoft.com/devcontainers/universal:linux",
+  
+  // Install Quarto CLI
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
-      "version": "latest"
+      "version": "latest",
+      "installTinyTex": true
+      }
+  },
+  
+  // Specify host characteristics
+  "hostRequirements": {
+    "cpus": 4
+  },
+  
+  // Finalize devcontainer setup
+  "postCreateCommand": "python3 -m pip install -r requirements.txt",
+  
+  "customization": {
+    // Configure properties specific to Codespaces.
+	  "codespaces": {
+      "openFiles" : [
+        "README.md"
+      ]
+    },
+
+    // Configure VSCode to our needs
+    "vscode": {
+      "settings": {},
+      "extensions": [ // preinstall VSCode extensions
+        "ms-toolsai.jupyter",
+        "ms-pytho.python",
+        "quarto.quarto"
+      ]
     }
   }
 }
