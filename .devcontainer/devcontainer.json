@@ -7,24 +7,23 @@
   // Install Quarto CLI
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
-      "version": "latest",
-      "installTinyTex": true
+      "version": "latest"
       }
   },
-  
+
   // Specify host characteristics
   "hostRequirements": {
     "cpus": 4
   },
-  
+
   // Finalize devcontainer setup
-  "postCreateCommand": "python3 -m pip install -r requirements.txt",
-  
-  "customization": {
-    // Configure properties specific to Codespaces.
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "python3 -m pip install -r requirements.txt",
+  "postCreateCommand": "quarto preview hello.qmd",
+  "customizations": {
 	  "codespaces": {
       "openFiles" : [
-        "README.md"
+        "hello.qmd"
       ]
     },
 
@@ -32,10 +31,10 @@
     "vscode": {
       "settings": {},
       "extensions": [ // preinstall VSCode extensions
-        "ms-toolsai.jupyter",
-        "ms-pytho.python",
-        "quarto.quarto"
+        "quarto.quarto",
+        "ms-python.python",
+        "ms-toolsai.jupyter"       
       ]
     }
   }
-} 
+}
