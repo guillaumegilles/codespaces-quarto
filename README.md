@@ -1,20 +1,51 @@
-# Quarto GitHub Codespaces Template
+# GitHub Codespaces ♥️ Quarto
 
-[GitHub Codespaces](https://github.com/features/codespaces) are a
-development environment that's hosted in the cloud. Codespace uses a
-**container** to provide you with common languages, tools, and
-utilities for development. Customize your project for GitHub Codespaces
-by configuring [dev container](https://containers.dev/) files to your
-repository (often known as configuration-as-code), which creates a
-repeatable codespace configuration for all users of your project. Once,
-initially configured, it is very simple to share custom-made
-development environment.
+Welcome to a custom made [GitHub Codespaces](https://github.com/features/codespaces)
+repository packed with everything needed to [get started with Quarto](https://quarto.org/docs/get-started/hello/vscode.html).
 
-Each codespace is hosted by GitHub in a Docker container, running on a
-virtual machine. All GitHub personal accounts include a 120 hrs of free
-compute time and 15 GB storage a month for GitHub Codespaces.
+You can use this repository as a template for your own projects. To do
+so, click the "Open in GitHub Codespaces" just below. This will create
+a new repository with the same files and structure.
 
-![Codespaces diagram](https://docs.github.com/assets/cb-68851/mw-1440/images/help/codespaces/codespaces-diagram.webp)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/guillaumegilles/codespaces-quarto)
+
+## 🔋 Batteries included
+
+At creation, the codespace comes with:
+- lastest version of **Python** and pre-installed packages:
+  - jupyter
+  - matplotlib
+  - plotly
+- VS Code for the web and useful extensions:
+  - [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+
+## Quarto CLI Commands
+
+```bash
+# Generate an output file based on the metadata in hello.qmd (html, by default) 
+quarto render hello.qmd
+```
+
+```bash
+quarto preview
+```
+
+# GitHub Codespaces
+
+GitHub Codespaces are a development environment that's hosted in the cloud. Codespace uses a
+**container** to provide common languages, tools, and utilities for
+development. Projects are customizable by configuring [dev container](https://containers.dev/
+files inside the repository (often known as configuration-as-code),
+which creates a repeatable codespace configuration. Once, initially
+configured, it is very simple to share custom-made development
+environment.
+
+Each codespace is hosted by GitHub in a [Docker container](https://www.docker.com/resources/what-container/),
+running on a virtual machine. All GitHub personal accounts include :
+- $120$ hours of free compute time.
+- $15$ GB storage a month.
 
 ## Configuring Codespaces
 
