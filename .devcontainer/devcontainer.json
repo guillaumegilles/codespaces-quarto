@@ -19,7 +19,15 @@
   // Finalize devcontainer setup
   "waitFor": "onCreateCommand",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  //"postCreateCommand": "quarto preview hello.qmd",
+  "postCreateCommand": "quarto preview hello.qmd --no-browser --port 8000",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Quarto Preview",
+      "onAutoForward": "openPreview"
+    }
+  },
+  
   "customizations": {
 	  "codespaces": {
       "openFiles" : [
@@ -36,12 +44,5 @@
         "ms-toolsai.jupyter"       
       ]
     }
-  },
-  "portsAttributes": {
-    "8000": {
-      "label": "Application",
-      "onAutoForward": "openPreview"
-    }
-  },
-  "forwardPorts": [8000]
+  }
 }
