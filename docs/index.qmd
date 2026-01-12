@@ -1,0 +1,4 @@
+---
+title: "Quarto CLI Manual"
+---
+

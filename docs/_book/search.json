@@ -1,0 +1,182 @@
+[
+  {
+    "objectID": "commands/quarto.html",
+    "href": "commands/quarto.html",
+    "title": "2  quarto",
+    "section": "",
+    "text": "2.1 SYNOPSIS",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>quarto</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto.html#synopsis",
+    "href": "commands/quarto.html#synopsis",
+    "title": "2  quarto",
+    "section": "",
+    "text": "quarto [COMMAND] [OPTIONS]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>quarto</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto.html#description",
+    "href": "commands/quarto.html#description",
+    "title": "2  quarto",
+    "section": "2.2 DESCRIPTION",
+    "text": "2.2 DESCRIPTION\n\nUsage:   quarto\nVersion: 1.8.26\n\nDescription:\n\n  Quarto CLI\n\nOptions:\n\n  -h, --help     - Show this help.                            \n  -V, --version  - Show the version number for this program.  \n\nCommands:\n\n  render     [input] [args...]     - Render files or projects to various document types.                 \n  preview    [file] [args...]      - Render and preview a document or website project.                   \n  serve      [input]               - Serve a Shiny interactive document.                                 \n  create     [type] [commands...]  - Create a Quarto project or extension                                \n  use        &lt;type&gt; [target]       - Automate document or project setup tasks.                           \n  add        &lt;extension&gt;           - Add an extension to this folder or project                          \n  update     [target...]           - Updates an extension or global dependency.                          \n  remove     [target...]           - Removes an extension.                                               \n  convert    &lt;input&gt;               - Convert documents to alternate representations.                     \n  pandoc     [args...]             - Run the version of Pandoc embedded within Quarto.                   \n  typst      [args...]             - Run the version of Typst embedded within Quarto.                    \n  run        [script] [args...]    - Run a TypeScript, R, Python, or Lua script.                         \n  list       &lt;type&gt;                - Lists an extension or global dependency.                            \n  install    [target...]           - Installs a global dependency (TinyTex or Chromium).                 \n  uninstall  [tool]                - Removes an extension.                                               \n  tools                            - Display the status of Quarto installed dependencies                 \n  publish    [provider] [path]     - Publish a document or project to a provider.                        \n  check      [target]              - Verify correct functioning of Quarto installation.                  \n  call                             - Access functions of Quarto subsystems such as its rendering engines.\n  help       [command]             - Show this help or the help of a sub-command.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>quarto</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-render.html",
+    "href": "commands/quarto-render.html",
+    "title": "3  quarto render",
+    "section": "",
+    "text": "3.1 NAME\nquarto render -",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>quarto render</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-render.html#synopsis",
+    "href": "commands/quarto-render.html#synopsis",
+    "title": "3  quarto render",
+    "section": "3.2 SYNOPSIS",
+    "text": "3.2 SYNOPSIS\nquarto render [OPTIONS]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>quarto render</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-render.html#description",
+    "href": "commands/quarto-render.html#description",
+    "title": "3  quarto render",
+    "section": "3.3 DESCRIPTION",
+    "text": "3.3 DESCRIPTION\n\nUsage:   quarto render [input] [args...]\nVersion: 1.8.26                         \n\nDescription:\n\n  Render files or projects to various document types.\n\nOptions:\n\n  -h, --help                          - Show this help.                                                   \n  -t, --to                            - Specify output format(s).                                         \n  -o, --output                        - Write output to FILE (use '--output -' for stdout).               \n  --output-dir                        - Write output to DIR (path is input/project relative)              \n  -M, --metadata                      - Metadata value (KEY:VALUE).                                       \n  --site-url                          - Override site-url for website or book output                      \n  --execute                           - Execute code (--no-execute to skip execution).                    \n  -P, --execute-param                 - Execution parameter (KEY:VALUE).                                  \n  --execute-params                    - YAML file with execution parameters.                              \n  --execute-dir                       - Working directory for code execution.                             \n  --execute-daemon                    - Keep Jupyter kernel alive (defaults to 300 seconds).              \n  --execute-daemon-restart            - Restart keepalive Jupyter kernel before render.                   \n  --execute-debug                     - Show debug output when executing computations.                    \n  --use-freezer                       - Force use of frozen computations for an incremental file render.  \n  --cache                             - Cache execution output (--no-cache to prevent cache).             \n  --cache-refresh                     - Force refresh of execution cache.                                 \n  --no-clean                          - Do not clean project output-dir prior to render                   \n  --debug                             - Leave intermediate files in place after render.                   \n  pandoc-args...                      - Additional pandoc command line arguments.                         \n  --log                     &lt;file&gt;    - Path to log file                                                  \n  --log-level               &lt;level&gt;   - Log level (debug, info, warning, error, critical)                 \n  --log-format              &lt;format&gt;  - Log format (plain, json-stream)                                   \n  --quiet                             - Suppress console output.                                          \n  --profile                           - Active project profile(s)                                         \n\nCommands:\n\n  help  [command]  - Show this help or the help of a sub-command.\n\nExamples:\n\n  Render Markdown:    quarto render document.qmd                  \n                      quarto render document.qmd --to html        \n                      quarto render document.qmd --to pdf --toc   \n  Render Notebook:    quarto render notebook.ipynb                \n                      quarto render notebook.ipynb --to docx      \n                      quarto render notebook.ipynb --to pdf --toc \n  Render Project:     quarto render                               \n                      quarto render projdir                       \n  Render w/ Metadata: quarto render document.qmd -M echo:false    \n                      quarto render document.qmd -M code-fold:true\n  Render to Stdout:   quarto render document.qmd --output -",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>quarto render</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-preview.html",
+    "href": "commands/quarto-preview.html",
+    "title": "4  quarto preview",
+    "section": "",
+    "text": "4.1 NAME\nquarto preview -",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>quarto preview</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-preview.html#synopsis",
+    "href": "commands/quarto-preview.html#synopsis",
+    "title": "4  quarto preview",
+    "section": "4.2 SYNOPSIS",
+    "text": "4.2 SYNOPSIS\nquarto preview [OPTIONS]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>quarto preview</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-preview.html#description",
+    "href": "commands/quarto-preview.html#description",
+    "title": "4  quarto preview",
+    "section": "4.3 DESCRIPTION",
+    "text": "4.3 DESCRIPTION\n\nUsage:   quarto preview [file] [args...]\nVersion: 1.8.26                         \n\nDescription:\n\n  Render and preview a document or website project.                                                   \n                                                                                                      \n  Automatically reloads the browser when input files or document resources (e.g. CSS) change.         \n                                                                                                      \n  For website preview, the most recent execution results of computational documents are used to render\n  the site (this is to optimize startup time). If you want to perform a full render prior to          \n  previewing pass the --render option with \"all\" or a comma-separated list of formats to render.      \n                                                                                                      \n  For document preview, input file changes will result in a re-render (pass --no-watch to prevent).   \n                                                                                                      \n  You can also include arbitrary command line arguments to be forwarded to \u001b[1mquarto render\u001b[22m.             \n\nOptions:\n\n  -h, --help                   - Show this help.                                                                                 \n  --port             [port]    - Suggested port to listen on (defaults to random value between 3000 and 8000).                   \n  --host             [host]    - Hostname to bind to (defaults to 127.0.0.1)                                                     \n  --render           [format]  - Render to the specified format(s) before previewing                            (Default: \"none\")\n  --no-serve                   - Don't run a local preview web server (just monitor and re-render input files)                   \n  --no-navigate                - Don't navigate the browser automatically when outputs are updated.                              \n  --no-browser                 - Don't open a browser to preview the site.                                                       \n  --no-watch-inputs            - Do not re-render input files when they change.                                                  \n  --timeout                    - Time (in seconds) after which to exit if there are no active clients.                           \n  --log              &lt;file&gt;    - Path to log file                                                                                \n  --log-level        &lt;level&gt;   - Log level (debug, info, warning, error, critical)                                               \n  --log-format       &lt;format&gt;  - Log format (plain, json-stream)                                                                 \n  --quiet                      - Suppress console output.                                                                        \n  --profile                    - Active project profile(s)                                                                       \n\nCommands:\n\n  help  [command]  - Show this help or the help of a sub-command.\n\nExamples:\n\n  Preview document:                                   quarto preview doc.qmd                  \n  Preview document with render command line args:     quarto preview doc.qmd --toc            \n  Preview document (don't watch for input changes):   quarto preview doc.qmd --no-watch-inputs\n  Preview website with most recent execution results: quarto preview                          \n  Previewing website using a specific port:           quarto preview --port 4444              \n  Preview website (don't open a browser):             quarto preview --no-browser             \n  Fully render all website/book formats then preview: quarto preview --render all             \n  Fully render the html format then preview:          quarto preview --render html",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>quarto preview</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-publish.html",
+    "href": "commands/quarto-publish.html",
+    "title": "5  quarto publish",
+    "section": "",
+    "text": "5.1 NAME\nquarto publish -",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>quarto publish</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-publish.html#synopsis",
+    "href": "commands/quarto-publish.html#synopsis",
+    "title": "5  quarto publish",
+    "section": "5.2 SYNOPSIS",
+    "text": "5.2 SYNOPSIS\nquarto publish [OPTIONS]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>quarto publish</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-publish.html#description",
+    "href": "commands/quarto-publish.html#description",
+    "title": "5  quarto publish",
+    "section": "5.3 DESCRIPTION",
+    "text": "5.3 DESCRIPTION\n\nUsage:   quarto publish [provider] [path]\nVersion: 1.8.26                          \n\nDescription:\n\n  Publish a document or project to a provider.            \n                                                          \n  Available providers include:                            \n                                                          \n   - Quarto Pub (quarto-pub)                              \n   - GitHub Pages (gh-pages)                              \n   - Posit Connect (connect)                              \n   - Netlify (netlify)                                    \n   - Confluence (confluence)                              \n   - Hugging Face Spaces (huggingface)                    \n                                                          \n  Accounts are configured interactively during publishing.\n  Manage/remove accounts with: quarto publish accounts    \n\nOptions:\n\n  -h, --help              - Show this help.                                     \n  --id          &lt;id&gt;      - Identifier of content to publish                    \n  --server      &lt;server&gt;  - Server to publish to                                \n  --token       &lt;token&gt;   - Access token for publising provider                 \n  --no-render             - Do not render before publishing.                    \n  --no-prompt             - Do not prompt to confirm publishing destination     \n  --no-browser            - Do not open a browser to the site after publishing  \n  --log         &lt;file&gt;    - Path to log file                                    \n  --log-level   &lt;level&gt;   - Log level (debug, info, warning, error, critical)   \n  --log-format  &lt;format&gt;  - Log format (plain, json-stream)                     \n  --quiet                 - Suppress console output.                            \n  --profile               - Active project profile(s)                           \n\nCommands:\n\n  help  [command]  - Show this help or the help of a sub-command.\n\nExamples:\n\n  Publish project (prompt for provider):  quarto publish                                                  \n  Publish document (prompt for provider): quarto publish document.qmd                                     \n  Publish project to Hugging Face Spaces: quarto publish huggingface                                      \n  Publish project to Netlify:             quarto publish netlify                                          \n  Publish with explicit target:           quarto publish netlify --id DA36416-F950-4647-815C-01A24233E294 \n  Publish project to GitHub Pages:        quarto publish gh-pages                                         \n  Publish project to Posit Connect:       quarto publish connect                                          \n  Publish with explicit credentials:      quarto publish connect --server example.com --token 01A24233E294\n  Publish without confirmation prompt:    quarto publish --no-prompt                                      \n  Publish without rendering:              quarto publish --no-render                                      \n  Publish without opening browser:        quarto publish --no-browser                                     \n  Manage/remove publishing accounts:      quarto publish accounts",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>quarto publish</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-check.html",
+    "href": "commands/quarto-check.html",
+    "title": "6  quarto check",
+    "section": "",
+    "text": "6.1 NAME\nquarto check -",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>quarto check</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-check.html#synopsis",
+    "href": "commands/quarto-check.html#synopsis",
+    "title": "6  quarto check",
+    "section": "6.2 SYNOPSIS",
+    "text": "6.2 SYNOPSIS\nquarto check [OPTIONS]",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>quarto check</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-check.html#description",
+    "href": "commands/quarto-check.html#description",
+    "title": "6  quarto check",
+    "section": "6.3 DESCRIPTION",
+    "text": "6.3 DESCRIPTION\n\nUsage:   quarto check [target]\nVersion: 1.8.26               \n\nDescription:\n\n  Verify correct functioning of Quarto installation.                         \n                                                                             \n  Check specific functionality with argument install, jupyter, knitr, or all.\n\nOptions:\n\n  -h, --help              - Show this help.                                                       \n  --output      &lt;path&gt;    - Output as JSON to a file                                              \n  --no-strict             - When set, will not fail if dependency versions don't match precisely  \n  --log         &lt;file&gt;    - Path to log file                                                      \n  --log-level   &lt;level&gt;   - Log level (debug, info, warning, error, critical)                     \n  --log-format  &lt;format&gt;  - Log format (plain, json-stream)                                       \n  --quiet                 - Suppress console output.                                              \n  --profile               - Active project profile(s)                                             \n\nCommands:\n\n  help  [command]  - Show this help or the help of a sub-command.\n\nExamples:\n\n  Check Quarto installation:          quarto check install\n  Check Jupyter engine:               quarto check jupyter\n  Check Knitr engine:                 quarto check knitr  \n  Check installation and all engines: quarto check all",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>quarto check</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-create.html",
+    "href": "commands/quarto-create.html",
+    "title": "7  quarto create",
+    "section": "",
+    "text": "7.1 NAME\nquarto create -",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>quarto create</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-create.html#synopsis",
+    "href": "commands/quarto-create.html#synopsis",
+    "title": "7  quarto create",
+    "section": "7.2 SYNOPSIS",
+    "text": "7.2 SYNOPSIS\nquarto create [OPTIONS]",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>quarto create</span>"
+    ]
+  },
+  {
+    "objectID": "commands/quarto-create.html#description",
+    "href": "commands/quarto-create.html#description",
+    "title": "7  quarto create",
+    "section": "7.3 DESCRIPTION",
+    "text": "7.3 DESCRIPTION\n\nUsage:   quarto create [type] [commands...]\nVersion: 1.8.26                            \n\nDescription:\n\n  Create a Quarto project or extension\n\nOptions:\n\n  -h, --help              - Show this help.                                               \n  --open        [editor]  - Open new artifact in this editor (positron, vscode, rstudio)  \n  --no-open               - Do not open in an editor                                      \n  --no-prompt             - Do not prompt to confirm actions                              \n  --log         &lt;file&gt;    - Path to log file                                              \n  --log-level   &lt;level&gt;   - Log level (debug, info, warning, error, critical)             \n  --log-format  &lt;format&gt;  - Log format (plain, json-stream)                               \n  --quiet                 - Suppress console output.                                      \n  --profile               - Active project profile(s)                                     \n\nCommands:\n\n  help  [command]  - Show this help or the help of a sub-command.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>quarto create</span>"
+    ]
+  }
+]

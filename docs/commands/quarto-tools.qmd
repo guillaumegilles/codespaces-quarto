@@ -1,0 +1,37 @@
+---
+title: "quarto tools"
+---
+
+## NAME
+
+quarto tools - 
+
+## SYNOPSIS
+
+```bash
+quarto tools [OPTIONS]
+```
+
+## DESCRIPTION
+
+```
+
+Usage:   quarto tools
+Version: 1.8.26      
+
+Description:
+
+  Display the status of Quarto installed dependencies
+
+Options:
+
+  -h, --help  - Show this help.  
+
+Commands:
+
+  help  [command]  - Show this help or the help of a sub-command.
+
+Examples:
+
+  Show tool status: quarto tools
+```

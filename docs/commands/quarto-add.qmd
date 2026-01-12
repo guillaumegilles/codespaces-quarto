@@ -1,0 +1,46 @@
+---
+title: "quarto add"
+---
+
+## NAME
+
+quarto add - 
+
+## SYNOPSIS
+
+```bash
+quarto add [OPTIONS]
+```
+
+## DESCRIPTION
+
+```
+
+Usage:   quarto add <extension>
+Version: 1.8.26                
+
+Description:
+
+  Add an extension to this folder or project
+
+Options:
+
+  -h, --help                   - Show this help.                                                                  
+  --no-prompt                  - Do not prompt to confirm actions                                                 
+  --embed       <extensionId>  - Embed this extension within another extension (used when authoring extensions).  
+  --log         <file>         - Path to log file                                                                 
+  --log-level   <level>        - Log level (debug, info, warning, error, critical)                                
+  --log-format  <format>       - Log format (plain, json-stream)                                                  
+  --quiet                      - Suppress console output.                                                         
+  --profile                    - Active project profile(s)                                                        
+
+Commands:
+
+  help  [command]  - Show this help or the help of a sub-command.
+
+Examples:
+
+  Install extension (Github): quarto add <gh-org>/<gh-repo>
+  Install extension (file):   quarto add <path-to-zip>     
+  Install extension (url):    quarto add <url>             
+```
