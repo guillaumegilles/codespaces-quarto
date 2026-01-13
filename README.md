@@ -21,18 +21,7 @@ At creation, the codespace comes with:
   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 
-## Quarto CLI Commands
-
-```bash
-# Generate an output file based on the metadata in hello.qmd (html, by default) 
-quarto render hello.qmd
-```
-
-```bash
-quarto preview
-```
-
-# GitHub Codespaces
+## GitHub Codespaces
 
 GitHub Codespaces are a development environment that's hosted in the
 cloud. Codespace uses a **container** to provide common languages,
@@ -47,7 +36,7 @@ running on a virtual machine. All GitHub personal accounts include:
   - $120$ hours of free compute time.
   - $15$ GB storage a month.
 
-## Configuring Codespaces
+### Configuring Codespaces
 
 When you work in a codespace, the environment you are working in is
 created using a development container, or _dev container_, hosted on a
@@ -59,7 +48,7 @@ need to work on a specific project.
 The configuration files for a _dev container_ are contained in a
 `.devcontainer` directory in your repository.
 
-## `devcontainer.json`
+### `devcontainer.json`
 
 The primary file in a dev container configuration is the
 `devcontainer.json` file, usually located in the `.devcontainer`
@@ -73,20 +62,20 @@ codespaces created for your repository.
 }
 ```
 
-### `image`
+#### `image`
 
 The [default Linux image](https://github.com/devcontainers/images/tree/main/src/universal)
 is perfect start. It is based on Ubuntu packed with several programming
 language : Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#,
 .NET Core, PHP, Go, Ruby, and Conda.
 
-### `features`
+#### `features`
 
 Dev Container **Features** are self-contained units of installation code
 and development container configuration. Features are designed to
 install atop a wide-range of base container images.
 
-### Options
+#### Options
 
 - `"hostRequirements"`: While `devcontainer.json` does not focus on
   hardware or VM provisioning, it can be useful to know one container’s
