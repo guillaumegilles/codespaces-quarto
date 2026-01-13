@@ -29,15 +29,14 @@
   },
   
   "customizations": {
-	  "codespaces": {
+	  // Open hello.qmd at codespace start
+    "codespaces": {
       "openFiles" : [
         "hello.qmd"
       ]
     },
-
     // Configure VSCode to our needs
     "vscode": {
-      "settings": {},
       "extensions": [ // preinstall VSCode extensions
         "quarto.quarto",
         "ms-python.python",

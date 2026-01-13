@@ -34,18 +34,18 @@ quarto preview
 
 # GitHub Codespaces
 
-GitHub Codespaces are a development environment that's hosted in the cloud. Codespace uses a
-**container** to provide common languages, tools, and utilities for
-development. Projects are customizable by configuring [dev container](https://containers.dev/
-files inside the repository (often known as configuration-as-code),
-which creates a repeatable codespace configuration. Once, initially
-configured, it is very simple to share custom-made development
-environment.
+GitHub Codespaces are a development environment that's hosted in the
+cloud. Codespace uses a **container** to provide common languages,
+tools, and utilities for development. Projects are customizable by
+configuring [dev container](https://containers.dev/) files inside the
+repository (often known as _configuration-as-code_), which creates a
+repeatable codespace configuration. Once, initially configured, it is
+very simple to share custom-made development environment.
 
 Each codespace is hosted by GitHub in a [Docker container](https://www.docker.com/resources/what-container/),
-running on a virtual machine. All GitHub personal accounts include :
-- $120$ hours of free compute time.
-- $15$ GB storage a month.
+running on a virtual machine. All GitHub personal accounts include:
+  - $120$ hours of free compute time.
+  - $15$ GB storage a month.
 
 ## Configuring Codespaces
 
@@ -96,18 +96,3 @@ install atop a wide-range of base container images.
   listed inside `requirements.txt` file.
 - `"customization"`: Customize the _user experience_ while working
   inside hte container.
-
-# Quarto CLI
-
-```text
-quarto-cli-book/
-├── generate.py
-├── _quarto.yml
-├── index.qmd
-├── commands/
-│   ├── quarto.qmd
-│   ├── quarto-render.qmd
-│   ├── quarto-preview.qmd
-│   └── ...
-└── man.css
-```
