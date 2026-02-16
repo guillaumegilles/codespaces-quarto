@@ -1,8 +1,8 @@
 {
   "name": "Quarto Codespaces",
   
-  // Default Linux image
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  // Default Linux image (smaller than universal)
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   
   // Install Quarto CLI
   "features": {
