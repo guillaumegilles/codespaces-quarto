@@ -19,7 +19,7 @@
   // Finalize devcontainer setup
   "waitFor": "onCreateCommand",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "quarto preview hello.qmd --no-browser --port 8000 &",
+  "postStartCommand": "bash -lc 'pgrep -f \"quarto preview hello.qmd --no-browser --port 8000\" >/dev/null || nohup quarto preview hello.qmd --no-browser --port 8000 >/tmp/quarto-preview.log 2>&1 &'",
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {
