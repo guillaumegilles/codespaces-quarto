@@ -23,7 +23,7 @@
   "waitFor": "onCreateCommand",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
   "postAttachCommand": {
-   "server": "quarto preview /workspaces/codespaces-quarto/hello.qmd --no-browser --port 8000"
+   "server": "quarto preview hello.qmd --output-dir _page --no-browser --port 8000"
   },
   "portsAttributes": {
     "8000": {

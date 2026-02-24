@@ -4,7 +4,6 @@ format:
   html:
     code-fold: true
 jupyter: python3
-output-dir: ./_page/
 ---
 
 For a demonstration of a line plot on a polar axis, see @fig-polar.
